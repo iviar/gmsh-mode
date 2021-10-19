@@ -1,3 +1,5 @@
+;; Initial Author: Tobias Nähring at tn-home.de published on Thu Mar 7 09:08:11 CET 2013 to gmsh@geiz.org with Message-id <948703310.104698.1362643691552.open-xchange@email.1und1.de>, Subject: [Gmsh] gmsh.el, as archived in http://onelab.info/pipermail/gmsh/2013/007976.html
+;; republished on Oct 5, 2017 with extensions in github.com/Bertbk by Bertrand Thierry
 
 (require 'cl)
 
