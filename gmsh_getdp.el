@@ -915,6 +915,7 @@
     "Mesh.CharacteristicLengthMax")
   "Options removed at least in 4.9+")
 
+;TODO: add space separed keywords as "Curve Loop" "Physical Loop"
 (defvar gmsh-keywords-list
   '("Return" "Call" "Exit"
     "Include" "SetName" "NonBlockingSystemCall" "SystemCall" "Sleep" "Mesh" "Delete" "BoundingBox" "Merge" "Error"
