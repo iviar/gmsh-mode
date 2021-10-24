@@ -13,7 +13,7 @@
   "Function identifier common to gmsh and getdp")
 
 (defvar gmsh/getdp-keywords-list
-  '("For" "EndFor" "If" "EndIf" "Else" "ElseIf" "Include" 
+  '("For" "EndFor" "If" "EndIf" "Else" "ElseIf" "Include" "Macro"
     "Choices" "Label" "Path" "Visible" "Highlight"
     "ReadOnly" "ReadOnlyRange" "Color" "Visible")
   "Keyword identifiers common to gmsh and getdp")
@@ -994,16 +994,20 @@
                                       ("ElseIf" "ElseIf")
                                       ("ElseIf" "Else")
                                       ("ElseIf" "EndIf")
+				      ("Macro" "Return")
                                       )
   "List of block statements that are common to gmsh and getdp.
 This list is mainly used for indentation.  Each entry is a list
 with the begin and end statement for a block.")
 
-(defvar gmsh-block-statements  '(("Function" "Return"))
-  "Gmsh block statements. Mainly for indentation.
+(defvar gmsh-block-statements  '(;actually empty ("" "")
+				 )
+  "Gmsh specific block statements, not valid in GetDP.
+Use the variable gmsh/getdp-block-statements for statements delimiters
+that are common to both.
 In each entry the first element is the block start the second the block end.")
 
-(defvar getdp-block-statements '(("Macro" "Return"))
+(defvar getdp-block-statements '(("Function" "Return"))
   "GetDP block statements. Mainly for indentation.
 In each entry the first element is the block start the second the block end.")
 
